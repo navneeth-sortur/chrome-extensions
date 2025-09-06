@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Ad‑Blocker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Personal Ad‑Blocker</h1>
+        <p class="subtitle">Your rules. Your browser.</p>
+      </header>
+
+      <section class="card">
+        <div class="row">
+          <span>Blocking</span>
+          <label class="switch">
+            <input id="toggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <p id="status" class="status">…</p>
+      </section>
+
+      <footer>
+        <a href="https://chromium.org" target="_blank" rel="noreferrer noopener"
+          >MV3 · DNR</a
+        >
+      </footer>
+    </div>
+
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>

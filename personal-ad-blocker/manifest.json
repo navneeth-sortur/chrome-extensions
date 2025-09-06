@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Personal Ad‑Blocker",
+  "version": "1.0.0",
+  "description": "Lightweight, privacy‑first blocker with a YouTube ad skipper and a simple ON/OFF toggle.",
+  "permissions": ["declarativeNetRequest", "storage", "scripting", "activeTab"],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Personal Ad‑Blocker"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "rules_1",
+        "enabled": true,
+        "path": "rules_1.json"
+      }
+    ]
+  },
+  "options_ui": {
+    "page": "popup.html",
+    "open_in_tab": false
+  }
+}
