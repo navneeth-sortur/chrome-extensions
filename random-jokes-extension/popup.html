@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Random Jokes</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-laugh"></i> Random Jokes</h1>
+        <p>Need a laugh? We've got you covered!</p>
+      </header>
+
+      <main>
+        <div class="joke-card">
+          <div class="loader" id="loader">
+            <div class="loader-spinner"></div>
+          </div>
+          <div class="joke-content" id="jokeContent">
+            <i class="fas fa-quote-left"></i>
+            <p id="jokeText">Click the button to load a joke!</p>
+            <i class="fas fa-quote-right"></i>
+          </div>
+          <div class="error-message" id="errorMessage">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Failed to load joke. Please try again.</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="newJokeBtn" class="btn-primary">
+            <i class="fas fa-plus"></i> New Joke
+          </button>
+          <button id="copyJokeBtn" class="btn-secondary" title="Copy joke">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+      </main>
+
+      <footer>
+        <p>Powered by JokeAPI</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
