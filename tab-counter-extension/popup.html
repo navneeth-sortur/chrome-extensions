@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Tab Counter</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Tab Counter</h1>
+      <p class="subtitle">Manage and monitor your browser tabs</p>
+    </header>
+
+    <div class="stats">
+      <div class="stat-box">
+        <div class="stat-number" id="tab-count">0</div>
+        <div class="stat-label">Total Tabs</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" id="unique-count">0</div>
+        <div class="stat-label">Unique Sites</div>
+      </div>
+    </div>
+
+    <div class="tabs-list" id="tabs-list">
+      <div class="empty-state">Loading tabs...</div>
+    </div>
+
+    <div class="actions">
+      <button id="refresh-btn" class="refresh-btn">
+        <span class="icon">↻</span> Refresh
+      </button>
+      <button id="export-btn">
+        <span class="icon">⤓</span> Export URLs
+      </button>
+    </div>
+
+    <footer>
+      <p>Tab Counter Extension v1.0</p>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
