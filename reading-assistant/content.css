@@ -1,0 +1,39 @@
+/* Content CSS - Injected into web pages */
+
+/* Smooth transitions for all ReadEase modifications */
+* {
+  transition: font-size 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Speaking text highlight animation */
+@keyframes readease-pulse {
+  0%,
+  100% {
+    background-color: #fff59d;
+    transform: scale(1);
+  }
+  50% {
+    background-color: #fff176;
+    transform: scale(1.02);
+  }
+}
+
+.readease-speaking {
+  background-color: #fff59d !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+  animation: readease-pulse 1.5s ease-in-out infinite !important;
+}
+
+/* Focus mode styles - applied when enabled */
+.readease-focus-active p,
+.readease-focus-active div,
+.readease-focus-active article,
+.readease-focus-active section {
+  cursor: pointer;
+}
+
+/* Prevent transition conflicts */
+body.readease-focus-active {
+  transition: none !important;
+}
