@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Memory Checker",
+  "description": "Check JavaScript memory usage of the current browser tab",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
